@@ -1,0 +1,1 @@
+"""Dungeon shooter prototype package."""

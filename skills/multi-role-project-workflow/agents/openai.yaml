@@ -1,0 +1,4 @@
+interface:
+  display_name: "Multi Role Project Workflow"
+  short_description: "Set up file-based multi-role project collaboration."
+  default_prompt: "Use this skill to create a reusable multi-role project workflow with role prompts, shared memory, a task board, handoff files, automatic summary, and archive handling."

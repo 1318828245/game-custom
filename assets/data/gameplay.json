@@ -1,0 +1,97 @@
+{
+  "rooms": [
+    {
+      "name": "Start Room",
+      "kind": "start",
+      "enemy_spawns": [],
+      "reward_type": null
+    },
+    {
+      "name": "Combat Room 1",
+      "kind": "combat",
+      "enemy_spawns": [
+        { "type": "melee", "x": 880, "y": 240 },
+        { "type": "ranged", "x": 980, "y": 420 }
+      ],
+      "reward_type": "heal"
+    },
+    {
+      "name": "Combat Room 2",
+      "kind": "combat",
+      "enemy_spawns": [
+        { "type": "melee", "x": 760, "y": 220 },
+        { "type": "ranged", "x": 940, "y": 360 },
+        { "type": "melee", "x": 820, "y": 540 }
+      ],
+      "reward_type": "fire_rate"
+    },
+    {
+      "name": "Boss Room",
+      "kind": "boss",
+      "enemy_spawns": [
+        { "type": "boss", "x": 940, "y": 360 }
+      ],
+      "reward_type": null
+    }
+  ],
+  "enemies": {
+    "melee": {
+      "radius": 24,
+      "max_hp": 3,
+      "speed": 92,
+      "contact_damage": 1,
+      "hit_flash_time": 0.12
+    },
+    "ranged": {
+      "radius": 22,
+      "max_hp": 2,
+      "speed": 56,
+      "contact_damage": 1,
+      "shoot_interval": 1.25,
+      "keep_distance": 340,
+      "distance_tolerance": 70,
+      "hit_flash_time": 0.12
+    },
+    "boss": {
+      "radius": 46,
+      "max_hp": 14,
+      "contact_damage": 1,
+      "shoot_interval": 1.05,
+      "hit_flash_time": 0.12
+    }
+  },
+  "projectiles": {
+    "player": {
+      "radius": 5,
+      "speed": 760,
+      "spawn_offset": 28,
+      "damage": 1,
+      "fire_cooldown": 0.18,
+      "min_fire_cooldown": 0.08
+    },
+    "enemy": {
+      "radius": 7,
+      "speed": 360,
+      "damage": 1
+    },
+    "boss": {
+      "radius": 12,
+      "speed": 300,
+      "damage": 1
+    }
+  },
+  "rewards": {
+    "pickup_radius": 18,
+    "message_time": 2.2,
+    "types": {
+      "heal": {
+        "label": "Heal +1",
+        "heal_amount": 1
+      },
+      "fire_rate": {
+        "label": "Rapid Fire",
+        "fire_rate_multiplier": 0.82
+      }
+    }
+  }
+}
